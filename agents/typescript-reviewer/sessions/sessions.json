@@ -1,0 +1,82 @@
+{
+  "agent:typescript-reviewer:subagent:ece0f3d9-928e-4326-9bb5-6f50be40f0b5": {
+    "sessionId": "0bcf1d28-a151-4c4d-bb5f-0edd34e1d73b",
+    "updatedAt": 1776622586627,
+    "spawnDepth": 1,
+    "subagentRole": "orchestrator",
+    "subagentControlScope": "children",
+    "thinkingLevel": "medium",
+    "model": "AHV-Holding-TroLy",
+    "modelProvider": "ahvholding",
+    "spawnedBy": "agent:master-orchestrator:telegram:group:-5168104492",
+    "spawnedWorkspaceDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/typescript-reviewer"
+  },
+  "agent:typescript-reviewer:subagent:1878d63d-81a8-4ec0-bdac-40221d4e3bda": {
+    "sessionId": "7a5455d5-561f-454f-a64b-274e5540def2",
+    "updatedAt": 1776623824153,
+    "spawnDepth": 1,
+    "subagentRole": "orchestrator",
+    "subagentControlScope": "children",
+    "thinkingLevel": "medium",
+    "model": "AHV-Holding-TroLy",
+    "modelProvider": "ahvholding",
+    "spawnedBy": "agent:master-orchestrator:telegram:group:-5168104492",
+    "spawnedWorkspaceDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/typescript-reviewer",
+    "deliveryContext": {
+      "channel": "telegram"
+    },
+    "lastChannel": "telegram",
+    "label": "dtlx:typescript-reviewer",
+    "channel": "telegram",
+    "groupId": "-5168104492",
+    "skillsSnapshot": {
+      "prompt": "",
+      "skills": [],
+      "skillFilter": [
+        "typescript-reviewer"
+      ],
+      "resolvedSkills": [],
+      "version": 0
+    },
+    "sessionFile": "/root/.openclaw/agents/typescript-reviewer/sessions/7a5455d5-561f-454f-a64b-274e5540def2.jsonl",
+    "status": "failed",
+    "startedAt": 1776623340897,
+    "abortedLastRun": false,
+    "endedAt": 1776623395697,
+    "runtimeMs": 0
+  },
+  "agent:typescript-reviewer:subagent:060f13c6-b3fe-4d2b-b201-866dc9c2b55a": {
+    "sessionId": "2c618314-ac33-4276-923b-84cd89cc089b",
+    "updatedAt": 1776625770567,
+    "spawnDepth": 1,
+    "subagentRole": "orchestrator",
+    "subagentControlScope": "children",
+    "thinkingLevel": "medium",
+    "model": "AHV-Holding-TroLy",
+    "modelProvider": "ahvholding",
+    "spawnedBy": "agent:master-orchestrator:telegram:group:-5168104492",
+    "spawnedWorkspaceDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/typescript-reviewer",
+    "deliveryContext": {
+      "channel": "telegram"
+    },
+    "lastChannel": "telegram",
+    "label": "dtlx:typescript-reviewer-v2",
+    "channel": "telegram",
+    "groupId": "-5168104492",
+    "skillsSnapshot": {
+      "prompt": "",
+      "skills": [],
+      "skillFilter": [
+        "typescript-reviewer"
+      ],
+      "resolvedSkills": [],
+      "version": 0
+    },
+    "sessionFile": "/root/.openclaw/agents/typescript-reviewer/sessions/2c618314-ac33-4276-923b-84cd89cc089b.jsonl",
+    "startedAt": 1776624611099,
+    "status": "failed",
+    "abortedLastRun": false,
+    "endedAt": 1776625745742,
+    "runtimeMs": 1134643
+  }
+}

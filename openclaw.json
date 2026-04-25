@@ -1,0 +1,1553 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.4.9",
+    "lastTouchedAt": "2026-04-11T00:55:20.709Z"
+  },
+  "env": {
+    "AHVHOLDING_API_KEY": "sk-3d8edc47e4037bc4-uqgure-3230ee14"
+  },
+  "browser": {
+    "enabled": true,
+    "headless": true,
+    "noSandbox": true
+  },
+  "auth": {
+    "profiles": {
+      "ahvholding:default": {
+        "provider": "ahvholding",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "ahvholding": {
+        "baseUrl": "https://auto.ahvchat.com",
+        "apiKey": "${AHVHOLDING_API_KEY}",
+        "api": "anthropic-messages",
+        "models": [
+          {
+            "id": "AHV-Holding-TroLy",
+            "name": "AHV Holding TroLy",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "contextWindow": 200000,
+            "maxTokens": 65536
+          },
+          {
+            "id": "AHV-Holding-DEV",
+            "name": "AHV Holding DEV",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "contextWindow": 200000,
+            "maxTokens": 65536
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "ahvholding/AHV-Holding-DEV",
+        "fallbacks": [
+          "ahvholding/AHV-Holding-TroLy"
+        ]
+      },
+      "skills": [
+        "/root/.openclaw/skills"
+      ],
+      "workspace": "/root/.openclaw/workspace",
+      "models": {
+        "anthropic/claude-sonnet-4-6": {}
+      },
+      "subagents": {
+        "allowAgents": [
+          "agile-product-owner",
+          "ai-seo",
+          "clean-code",
+          "code-reviewer",
+          "coding-standards",
+          "content-engine",
+          "content-strategy",
+          "database-reviewer",
+          "database-schema-designer",
+          "deep-research",
+          "documentation-lookup",
+          "epic-design",
+          "harness-optimizer",
+          "market-intelligence",
+          "master-orchestrator",
+          "performance-optimizer",
+          "planner",
+          "playwright-pro",
+          "product-marketing-context",
+          "product-strategy",
+          "prompt-optimizer",
+          "realistic-seeder",
+          "refactor-cleaner",
+          "security-reviewer",
+          "senior-architect",
+          "senior-backend",
+          "senior-devops",
+          "senior-frontend",
+          "senior-qa",
+          "senior-security",
+          "seo-audit",
+          "shadcn-expert",
+          "stitch-design",
+          "stitch-loop",
+          "article-writing",
+          "typescript-reviewer",
+          "ui-design-system",
+          "ui-ux-pro-max",
+          "sessions_send",
+          "sessions_spawn",
+          "subagents"
+        ]
+      }
+    },
+    "list": [
+      {
+        "id": "agile-product-owner",
+        "name": "agile-product-owner",
+        "workspace": "/root/.openclaw/skills/agile-product-owner",
+        "agentDir": "/root/.openclaw/agents/agile-product-owner/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "agile-product-owner"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "ai-seo",
+        "name": "ai-seo",
+        "workspace": "/root/.openclaw/skills/ai-seo",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "agentDir": "/root/.openclaw/agents/ai-seo/agent",
+        "skills": [
+          "ai-seo"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "clean-code",
+        "name": "clean-code",
+        "workspace": "/root/.openclaw/skills/clean-code",
+        "agentDir": "/root/.openclaw/agents/clean-code/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "clean-code"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "code-reviewer",
+        "name": "code-reviewer",
+        "workspace": "/root/.openclaw/skills/code-reviewer",
+        "agentDir": "/root/.openclaw/agents/code-reviewer/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "code-reviewer"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "coding-standards",
+        "name": "coding-standards",
+        "workspace": "/root/.openclaw/skills/coding-standards",
+        "agentDir": "/root/.openclaw/agents/coding-standards/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "coding-standards"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "content-strategy",
+        "name": "content-strategy",
+        "workspace": "/root/.openclaw/skills/content-strategy",
+        "agentDir": "/root/.openclaw/agents/content-strategy/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "content-strategy"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "database-reviewer",
+        "name": "database-reviewer",
+        "workspace": "/root/.openclaw/skills/database-reviewer",
+        "agentDir": "/root/.openclaw/agents/database-reviewer/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "database-reviewer"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "database-schema-designer",
+        "name": "database-schema-designer",
+        "workspace": "/root/.openclaw/skills/database-schema-designer",
+        "agentDir": "/root/.openclaw/agents/database-schema-designer/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "database-schema-designer"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "epic-design",
+        "name": "epic-design",
+        "workspace": "/root/.openclaw/skills/epic-design",
+        "agentDir": "/root/.openclaw/agents/epic-design/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "epic-design"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "harness-optimizer",
+        "name": "harness-optimizer",
+        "workspace": "/root/.openclaw/skills/harness-optimizer",
+        "agentDir": "/root/.openclaw/agents/harness-optimizer/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "harness-optimizer"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "market-intelligence",
+        "name": "market-intelligence",
+        "workspace": "/root/.openclaw/skills/market-intelligence",
+        "agentDir": "/root/.openclaw/agents/market-intelligence/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "market-intelligence"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "master-orchestrator",
+        "name": "master-orchestrator",
+        "workspace": "/root/.openclaw/skills/master-orchestrator",
+        "agentDir": "/root/.openclaw/agents/master-orchestrator/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "master-orchestrator"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents",
+            "cron"
+          ]
+        },
+        "default": true
+      },
+      {
+        "id": "performance-optimizer",
+        "name": "performance-optimizer",
+        "workspace": "/root/.openclaw/skills/performance-optimizer",
+        "agentDir": "/root/.openclaw/agents/performance-optimizer/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "performance-optimizer"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "planner",
+        "name": "planner",
+        "workspace": "/root/.openclaw/skills/planner",
+        "agentDir": "/root/.openclaw/agents/planner/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "planner"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "playwright-pro",
+        "name": "playwright-pro",
+        "workspace": "/root/.openclaw/skills/playwright-pro",
+        "agentDir": "/root/.openclaw/agents/playwright-pro/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "playwright-pro"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "product-marketing-context",
+        "name": "product-marketing-context",
+        "workspace": "/root/.openclaw/skills/product-marketing-context",
+        "agentDir": "/root/.openclaw/agents/product-marketing-context/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "product-marketing-context"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "product-strategy",
+        "name": "product-strategy",
+        "workspace": "/root/.openclaw/skills/product-strategy",
+        "agentDir": "/root/.openclaw/agents/product-strategy/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "product-strategy"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "prompt-optimizer",
+        "name": "prompt-optimizer",
+        "workspace": "/root/.openclaw/skills/prompt-optimizer",
+        "agentDir": "/root/.openclaw/agents/prompt-optimizer/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "prompt-optimizer"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "realistic-seeder",
+        "name": "realistic-seeder",
+        "workspace": "/root/.openclaw/skills/realistic-seeder",
+        "agentDir": "/root/.openclaw/agents/realistic-seeder/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "realistic-seeder"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "refactor-cleaner",
+        "name": "refactor-cleaner",
+        "workspace": "/root/.openclaw/skills/refactor-cleaner",
+        "agentDir": "/root/.openclaw/agents/refactor-cleaner/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "refactor-cleaner"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "security-reviewer",
+        "name": "security-reviewer",
+        "workspace": "/root/.openclaw/skills/security-reviewer",
+        "agentDir": "/root/.openclaw/agents/security-reviewer/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "security-reviewer"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "senior-architect",
+        "name": "senior-architect",
+        "workspace": "/root/.openclaw/skills/senior-architect",
+        "agentDir": "/root/.openclaw/agents/senior-architect/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "senior-architect"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "senior-backend",
+        "name": "senior-backend",
+        "workspace": "/root/.openclaw/skills/senior-backend",
+        "agentDir": "/root/.openclaw/agents/senior-backend/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "senior-backend"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "senior-devops",
+        "name": "senior-devops",
+        "workspace": "/root/.openclaw/skills/senior-devops",
+        "agentDir": "/root/.openclaw/agents/senior-devops/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "senior-devops"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "senior-frontend",
+        "name": "senior-frontend",
+        "workspace": "/root/.openclaw/skills/senior-frontend",
+        "agentDir": "/root/.openclaw/agents/senior-frontend/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "senior-frontend"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "senior-qa",
+        "name": "senior-qa",
+        "workspace": "/root/.openclaw/skills/senior-qa",
+        "agentDir": "/root/.openclaw/agents/senior-qa/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "senior-qa"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "senior-security",
+        "name": "senior-security",
+        "workspace": "/root/.openclaw/skills/senior-security",
+        "agentDir": "/root/.openclaw/agents/senior-security/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "senior-security"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "seo-audit",
+        "name": "seo-audit",
+        "workspace": "/root/.openclaw/skills/seo-audit",
+        "agentDir": "/root/.openclaw/agents/seo-audit/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "seo-audit"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "shadcn-expert",
+        "name": "shadcn-expert",
+        "workspace": "/root/.openclaw/skills/shadcn-expert",
+        "agentDir": "/root/.openclaw/agents/shadcn-expert/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "shadcn-expert"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "stitch-design",
+        "name": "stitch-design",
+        "workspace": "/root/.openclaw/skills/stitch-design",
+        "agentDir": "/root/.openclaw/agents/stitch-design/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "stitch-design"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "stitch-loop",
+        "name": "stitch-loop",
+        "workspace": "/root/.openclaw/skills/stitch-loop",
+        "agentDir": "/root/.openclaw/agents/stitch-loop/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "stitch-loop"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "typescript-reviewer",
+        "name": "typescript-reviewer",
+        "workspace": "/root/.openclaw/skills/typescript-reviewer",
+        "agentDir": "/root/.openclaw/agents/typescript-reviewer/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "typescript-reviewer"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "ui-design-system",
+        "name": "ui-design-system",
+        "workspace": "/root/.openclaw/skills/ui-design-system",
+        "agentDir": "/root/.openclaw/agents/ui-design-system/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "ui-design-system"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "ui-ux-pro-max",
+        "name": "ui-ux-pro-max",
+        "workspace": "/root/.openclaw/skills/ui-ux-pro-max",
+        "agentDir": "/root/.openclaw/agents/ui-ux-pro-max/agent",
+        "model": "ahvholding/AHV-Holding-DEV",
+        "skills": [
+          "ui-ux-pro-max"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "article-writing",
+        "name": "article-writing",
+        "workspace": "/root/.openclaw/skills/article-writing",
+        "agentDir": "/root/.openclaw/agents/article-writing/agent",
+        "model": "ahvholding/AHV-Holding-TroLy",
+        "skills": [
+          "article-writing"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "content-engine",
+        "name": "content-engine",
+        "workspace": "/root/.openclaw/skills/content-engine",
+        "agentDir": "/root/.openclaw/agents/content-engine/agent",
+        "model": "ahvholding/AHV-Holding-TroLy",
+        "skills": [
+          "content-engine"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "deep-research",
+        "name": "deep-research",
+        "workspace": "/root/.openclaw/skills/deep-research",
+        "agentDir": "/root/.openclaw/agents/deep-research/agent",
+        "model": "ahvholding/AHV-Holding-TroLy",
+        "skills": [
+          "deep-research"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "web_search",
+            "web_fetch",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      },
+      {
+        "id": "documentation-lookup",
+        "name": "documentation-lookup",
+        "workspace": "/root/.openclaw/skills/documentation-lookup",
+        "agentDir": "/root/.openclaw/agents/documentation-lookup/agent",
+        "model": "ahvholding/AHV-Holding-TroLy",
+        "skills": [
+          "documentation-lookup"
+        ],
+        "tools": {
+          "alsoAllow": [
+            "browser",
+            "agents_list",
+            "tts",
+            "memory_search",
+            "memory_get",
+            "sessions_list",
+            "sessions_history",
+            "sessions_send",
+            "sessions_spawn",
+            "subagents"
+          ]
+        }
+      }
+    ]
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "accounts": {
+        "main_bot": {
+          "botToken": "8677118967:AAG3S3xemTiYlTEuXGydyXR6R3c-1QbWWIw",
+          "dmPolicy": "pairing",
+          "groups": {
+            "-5168104492": {}
+          }
+        },
+        "agile-product-owner_bot": {
+          "botToken": "8780842070:AAEsgfYGXQpJHuw8nJG_QV0G-Gb0n-urdqE",
+          "dmPolicy": "pairing"
+        },
+        "ai-seo_bot": {
+          "botToken": "8701675628:AAFZOFTYymaWMKGbVF69bUvclcR97VGXBEY",
+          "dmPolicy": "pairing"
+        },
+        "clean-code_bot": {
+          "botToken": "8797029571:AAHrt5qqiFlDsXcYK6DddKArmB3us3T7OVk",
+          "dmPolicy": "pairing"
+        },
+        "code-reviewer_bot": {
+          "botToken": "8569521497:AAHXjTB6yDiXC3ooNMLiu1eVTxqllhtJNbQ",
+          "dmPolicy": "pairing"
+        },
+        "coding-standards_bot": {
+          "botToken": "8687013631:AAEadqG74QMRBAnBQoMnR3hs9Cphxg5oFPE",
+          "dmPolicy": "pairing"
+        },
+        "content-strategy_bot": {
+          "botToken": "8631036200:AAG3m6fcDED4yGvn8cbbJeh1IKGZ_So2l_E",
+          "dmPolicy": "pairing"
+        },
+        "database-reviewer_bot": {
+          "botToken": "8288685233:AAG5Y6z2DsJgwrRZLvuc9ecdLuPPTr4rDZc",
+          "dmPolicy": "pairing"
+        },
+        "database-schema-designer_bot": {
+          "botToken": "8616064308:AAHVdC0XC0q4okD1qf-h3vc9rq_nIThWgAg",
+          "dmPolicy": "pairing"
+        },
+        "epic-design_bot": {
+          "botToken": "8607620910:AAEaqBX_WMn4SQz38B7qbHbSKu1qfPtwVLM",
+          "dmPolicy": "pairing"
+        },
+        "harness-optimizer_bot": {
+          "botToken": "8737687876:AAHHoRxxGVxxECGD5Mg3AXm_AYEKPEzR9QI",
+          "dmPolicy": "pairing"
+        },
+        "market-intelligence_bot": {
+          "botToken": "8660766320:AAEijGn8nvvEFn4J7ZnNcG1slupR2FC3Hzc",
+          "dmPolicy": "pairing"
+        },
+        "performance-optimizer_bot": {
+          "botToken": "8059050784:AAENEd-V5eveAXPdKPLyHnhAyPL-US6sCOY",
+          "dmPolicy": "pairing"
+        },
+        "planner_bot": {
+          "botToken": "8793147193:AAE40Utggq342hW_LIiE8ebvZY2QjALYQtk",
+          "dmPolicy": "pairing"
+        },
+        "playwright-pro_bot": {
+          "botToken": "8774288839:AAHHcgLWf6Jhbodyg_oYLjhPUQRIFyVw520",
+          "dmPolicy": "pairing"
+        },
+        "product-marketing-context_bot": {
+          "botToken": "8731088515:AAE3E6FGs8GxK5f1Y_DM2ZGpjgSr4I8vd8A",
+          "dmPolicy": "pairing"
+        },
+        "product-strategy_bot": {
+          "botToken": "8610649811:AAEdFLZYquDqtIawu6UAm37FyKHQjhZGB_8",
+          "dmPolicy": "pairing"
+        },
+        "prompt-optimizer_bot": {
+          "botToken": "8578161006:AAFuNPBSi_EKAgA_kCTYAK0Jh398mNHix2Y",
+          "dmPolicy": "pairing"
+        },
+        "realistic-seeder_bot": {
+          "botToken": "8573074754:AAGwvgqJGuJUS_Ng1H5MhO2e6uzq6hA7FHM",
+          "dmPolicy": "pairing"
+        },
+        "refactor-cleaner_bot": {
+          "botToken": "8697597675:AAGI_kkidqmlJ-BWduxkV6coHZXB0qMlChU",
+          "dmPolicy": "pairing"
+        },
+        "security-reviewer_bot": {
+          "botToken": "8714527738:AAGKxuquF43tr6yEMaWHJWN-Agk7FjNZaTk",
+          "dmPolicy": "pairing"
+        },
+        "senior-architect_bot": {
+          "botToken": "8718045256:AAE2VjZQbYUN2sA-O6aNLfnTPcuKTmOiOmY",
+          "dmPolicy": "pairing"
+        },
+        "senior-backend_bot": {
+          "botToken": "8718045256:AAE2VjZQbYUN2sA-O6aNLfnTPcuKTmOiOmY",
+          "dmPolicy": "pairing"
+        },
+        "senior-devops_bot": {
+          "botToken": "8365541473:AAFV1rvEO9nkTbHiaKb23UWZyXG7t1uzhro",
+          "dmPolicy": "pairing"
+        },
+        "senior-frontend_bot": {
+          "botToken": "8778195588:AAH7vo7EpylbTsEQ_8j6XHF-PHcvxHETB_c",
+          "dmPolicy": "pairing"
+        },
+        "senior-qa_bot": {
+          "botToken": "8383505571:AAGIrhXLtR7ZGao4QD1Nz3IKQp1Rr8CplRk",
+          "dmPolicy": "pairing"
+        },
+        "senior-security_bot": {
+          "botToken": "8752534991:AAFkcYCf-7sOj2hHSR_w2KjpqTs866qggaE",
+          "dmPolicy": "pairing"
+        },
+        "seo-audit_bot": {
+          "botToken": "8260406123:AAEH8a6wmvhS2vatuW4UV1MMsVBtjtG9sEc",
+          "dmPolicy": "pairing"
+        },
+        "shadcn-expert_bot": {
+          "botToken": "8603405996:AAED_THkS6qgIuOcx8-h0HiWXZAjtiDDvYA",
+          "dmPolicy": "pairing"
+        },
+        "stitch-design_bot": {
+          "botToken": "8761657141:AAEt0096RbAPEgwCC9zoJXHDEle5YEjhnbM",
+          "dmPolicy": "pairing"
+        },
+        "stitch-loop_bot": {
+          "botToken": "8691874082:AAHqqjn3KA_wE6E80y0uVSQWMeyMdUuLYbo",
+          "dmPolicy": "pairing"
+        },
+        "typescript-reviewer_bot": {
+          "botToken": "8691874082:AAHqqjn3KA_wE6E80y0uVSQWMeyMdUuLYbo",
+          "dmPolicy": "pairing"
+        },
+        "ui-design-system_bot": {
+          "botToken": "8785163490:AAHEX__RZhNuGHEjR2HT8hqLthmhXFK-UDo",
+          "dmPolicy": "pairing"
+        },
+        "ui-ux-pro-max_bot": {
+          "botToken": "8564974403:AAFS0ZmAIi33z0pUz69Y4VtT2GA-VfEY8pU",
+          "dmPolicy": "pairing"
+        }
+      }
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "master-orchestrator",
+      "match": {
+        "channel": "telegram",
+        "accountId": "main_bot"
+      }
+    },
+    {
+      "agentId": "agile-product-owner",
+      "match": {
+        "channel": "telegram",
+        "accountId": "agile-product-owner_bot"
+      }
+    },
+    {
+      "agentId": "ai-seo",
+      "match": {
+        "channel": "telegram",
+        "accountId": "ai-seo_bot"
+      }
+    },
+    {
+      "agentId": "clean-code",
+      "match": {
+        "channel": "telegram",
+        "accountId": "clean-code_bot"
+      }
+    },
+    {
+      "agentId": "code-reviewer",
+      "match": {
+        "channel": "telegram",
+        "accountId": "code-reviewer_bot"
+      }
+    },
+    {
+      "agentId": "coding-standards",
+      "match": {
+        "channel": "telegram",
+        "accountId": "coding-standards_bot"
+      }
+    },
+    {
+      "agentId": "content-strategy",
+      "match": {
+        "channel": "telegram",
+        "accountId": "content-strategy_bot"
+      }
+    },
+    {
+      "agentId": "database-reviewer",
+      "match": {
+        "channel": "telegram",
+        "accountId": "database-reviewer_bot"
+      }
+    },
+    {
+      "agentId": "database-schema-designer",
+      "match": {
+        "channel": "telegram",
+        "accountId": "database-schema-designer_bot"
+      }
+    },
+    {
+      "agentId": "epic-design",
+      "match": {
+        "channel": "telegram",
+        "accountId": "epic-design_bot"
+      }
+    },
+    {
+      "agentId": "harness-optimizer",
+      "match": {
+        "channel": "telegram",
+        "accountId": "harness-optimizer_bot"
+      }
+    },
+    {
+      "agentId": "market-intelligence",
+      "match": {
+        "channel": "telegram",
+        "accountId": "market-intelligence_bot"
+      }
+    },
+    {
+      "agentId": "performance-optimizer",
+      "match": {
+        "channel": "telegram",
+        "accountId": "performance-optimizer_bot"
+      }
+    },
+    {
+      "agentId": "planner",
+      "match": {
+        "channel": "telegram",
+        "accountId": "planner_bot"
+      }
+    },
+    {
+      "agentId": "playwright-pro",
+      "match": {
+        "channel": "telegram",
+        "accountId": "playwright-pro_bot"
+      }
+    },
+    {
+      "agentId": "product-marketing-context",
+      "match": {
+        "channel": "telegram",
+        "accountId": "product-marketing-context_bot"
+      }
+    },
+    {
+      "agentId": "product-strategy",
+      "match": {
+        "channel": "telegram",
+        "accountId": "product-strategy_bot"
+      }
+    },
+    {
+      "agentId": "prompt-optimizer",
+      "match": {
+        "channel": "telegram",
+        "accountId": "prompt-optimizer_bot"
+      }
+    },
+    {
+      "agentId": "realistic-seeder",
+      "match": {
+        "channel": "telegram",
+        "accountId": "realistic-seeder_bot"
+      }
+    },
+    {
+      "agentId": "refactor-cleaner",
+      "match": {
+        "channel": "telegram",
+        "accountId": "refactor-cleaner_bot"
+      }
+    },
+    {
+      "agentId": "security-reviewer",
+      "match": {
+        "channel": "telegram",
+        "accountId": "security-reviewer_bot"
+      }
+    },
+    {
+      "agentId": "senior-architect",
+      "match": {
+        "channel": "telegram",
+        "accountId": "senior-architect_bot"
+      }
+    },
+    {
+      "agentId": "senior-backend",
+      "match": {
+        "channel": "telegram",
+        "accountId": "senior-backend_bot"
+      }
+    },
+    {
+      "agentId": "senior-devops",
+      "match": {
+        "channel": "telegram",
+        "accountId": "senior-devops_bot"
+      }
+    },
+    {
+      "agentId": "senior-frontend",
+      "match": {
+        "channel": "telegram",
+        "accountId": "senior-frontend_bot"
+      }
+    },
+    {
+      "agentId": "senior-qa",
+      "match": {
+        "channel": "telegram",
+        "accountId": "senior-qa_bot"
+      }
+    },
+    {
+      "agentId": "senior-security",
+      "match": {
+        "channel": "telegram",
+        "accountId": "senior-security_bot"
+      }
+    },
+    {
+      "agentId": "seo-audit",
+      "match": {
+        "channel": "telegram",
+        "accountId": "seo-audit_bot"
+      }
+    },
+    {
+      "agentId": "shadcn-expert",
+      "match": {
+        "channel": "telegram",
+        "accountId": "shadcn-expert_bot"
+      }
+    },
+    {
+      "agentId": "stitch-design",
+      "match": {
+        "channel": "telegram",
+        "accountId": "stitch-design_bot"
+      }
+    },
+    {
+      "agentId": "stitch-loop",
+      "match": {
+        "channel": "telegram",
+        "accountId": "stitch-loop_bot"
+      }
+    },
+    {
+      "agentId": "typescript-reviewer",
+      "match": {
+        "channel": "telegram",
+        "accountId": "typescript-reviewer_bot"
+      }
+    },
+    {
+      "agentId": "ui-design-system",
+      "match": {
+        "channel": "telegram",
+        "accountId": "ui-design-system_bot"
+      }
+    },
+    {
+      "agentId": "ui-ux-pro-max",
+      "match": {
+        "channel": "telegram",
+        "accountId": "ui-ux-pro-max_bot"
+      }
+    }
+  ],
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "83eaaf256ae54e4fa1bf7798033cfe591438bcdff21417b3"
+    },
+    "port": 18789,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "controlUi": {
+      "allowInsecureAuth": true
+    }
+  },
+  "plugins": {
+    "entries": {
+      "browser": {
+        "enabled": true
+      },
+      "google": {
+        "enabled": true,
+        "config": {
+          "webSearch": {
+            "apiKey": "AIzaSyCBlb9hHeijfFXkpNifWfEJB0K53fHNAZ8"
+          }
+        }
+      },
+      "anthropic": {
+        "enabled": true
+      }
+    }
+  },
+  "mcp": {
+    "servers": {
+      "confluence": {
+        "command": "node",
+        "args": [
+          "/root/.openclaw/mcp-servers/confluence/server.js"
+        ],
+        "env": {
+          "CONFLUENCE_URL": "https://dtlx.atlassian.net",
+          "CONFLUENCE_EMAIL": "ninhkhuongpl7@gmail.com",
+          "CONFLUENCE_TOKEN": "ATATT3xFfGF0bFjmIN6IPHwDzRChO8oMe5XAaA6dheluE8J2eUTNZHLgprik7oLx-vNnZsNVCb4cAAjziLDb27lKFHU2_RTgdeuv8zMkaPR-or2gSJQjHp8TMmOtI53F6MauTeaXX5Tg4gdMYyJ2nUKI-2HSMvK4TLkXLmKSKrdGrOpNDLRgMxA=8865492F"
+        },
+        "enabled": true
+      }
+    }
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "tools": {
+    "agentToAgent": {
+      "enabled": true,
+      "allow": [
+        "agile-product-owner",
+        "ai-seo",
+        "clean-code",
+        "code-reviewer",
+        "coding-standards",
+        "content-strategy",
+        "database-reviewer",
+        "database-schema-designer",
+        "epic-design",
+        "harness-optimizer",
+        "market-intelligence",
+        "master-orchestrator",
+        "performance-optimizer",
+        "planner",
+        "playwright-pro",
+        "product-marketing-context",
+        "product-strategy",
+        "prompt-optimizer",
+        "realistic-seeder",
+        "refactor-cleaner",
+        "security-reviewer",
+        "senior-architect",
+        "senior-backend",
+        "senior-devops",
+        "senior-frontend",
+        "senior-qa",
+        "senior-security",
+        "seo-audit",
+        "shadcn-expert",
+        "stitch-design",
+        "stitch-loop",
+        "typescript-reviewer",
+        "ui-design-system",
+        "ui-ux-pro-max",
+        "sessions_send",
+        "sessions_spawn",
+        "subagents"
+      ]
+    },
+    "sessions": {
+      "visibility": "all"
+    },
+    "profile": "coding",
+    "web": {
+      "search": {
+        "provider": "gemini",
+        "enabled": true
+      }
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "pnpm"
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-04-11T00:55:20.084Z",
+    "lastRunVersion": "2026.4.9",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        },
+        "boot-md": {
+          "enabled": true
+        }
+      }
+    }
+  }
+}

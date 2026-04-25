@@ -1,0 +1,14 @@
+{
+  "name": "ahv-mcp-gitlab",
+  "version": "1.0.0",
+  "description": "AHV GitLab MCP server — list repos, MRs, issues, triggers",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "install-deps": "npm install --silent"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  }
+}

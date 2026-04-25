@@ -1,0 +1,14 @@
+{
+  "name": "ahv-mcp-confluence",
+  "version": "1.0.0",
+  "description": "AHV Confluence MCP server — search, read, create, update pages",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "install-deps": "npm install --silent"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  }
+}

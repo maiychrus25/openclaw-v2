@@ -1,0 +1,36 @@
+{
+  "agent:refactor-cleaner:subagent:472fb161-f87a-400e-8259-5e6a80641f51": {
+    "sessionId": "457ce286-ad7f-49df-9874-ba39c801d477",
+    "updatedAt": 1776624102153,
+    "spawnDepth": 1,
+    "subagentRole": "orchestrator",
+    "subagentControlScope": "children",
+    "thinkingLevel": "medium",
+    "model": "AHV-Holding-TroLy",
+    "modelProvider": "ahvholding",
+    "spawnedBy": "agent:master-orchestrator:telegram:group:-5168104492",
+    "spawnedWorkspaceDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/refactor-cleaner",
+    "deliveryContext": {
+      "channel": "telegram"
+    },
+    "lastChannel": "telegram",
+    "label": "dtlx:refactor-cleaner",
+    "channel": "telegram",
+    "groupId": "-5168104492",
+    "skillsSnapshot": {
+      "prompt": "",
+      "skills": [],
+      "skillFilter": [
+        "refactor-cleaner"
+      ],
+      "resolvedSkills": [],
+      "version": 0
+    },
+    "sessionFile": "/root/.openclaw/agents/refactor-cleaner/sessions/457ce286-ad7f-49df-9874-ba39c801d477.jsonl",
+    "startedAt": 1776623895080,
+    "status": "failed",
+    "abortedLastRun": false,
+    "endedAt": 1776624078019,
+    "runtimeMs": 13123
+  }
+}

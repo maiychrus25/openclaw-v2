@@ -1,0 +1,1132 @@
+{
+  "agent:shadcn-expert:subagent:abe70c34-a5b4-4d27-89d8-0d74b08db1c8": {
+    "sessionId": "698b3a29-6360-4f4e-b454-1fc612a67642",
+    "updatedAt": 1776571523495,
+    "spawnDepth": 1,
+    "subagentRole": "orchestrator",
+    "subagentControlScope": "children",
+    "thinkingLevel": "medium",
+    "model": "AHV-Holding-DEV",
+    "modelProvider": "ahvholding",
+    "spawnedBy": "agent:master-orchestrator:telegram:direct:6053576134",
+    "spawnedWorkspaceDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert",
+    "deliveryContext": {
+      "channel": "telegram"
+    },
+    "lastChannel": "telegram",
+    "label": "maiy:shadcn-expert",
+    "channel": "telegram",
+    "skillsSnapshot": {
+      "prompt": "",
+      "skills": [],
+      "skillFilter": [
+        "shadcn-expert"
+      ],
+      "resolvedSkills": [],
+      "version": 0
+    },
+    "sessionFile": "/root/.openclaw/agents/shadcn-expert/sessions/698b3a29-6360-4f4e-b454-1fc612a67642.jsonl",
+    "status": "done",
+    "startedAt": 1776571310257,
+    "abortedLastRun": false,
+    "endedAt": 1776571499253,
+    "runtimeMs": 81692,
+    "contextTokens": 200000,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1776571417229,
+      "sessionId": "698b3a29-6360-4f4e-b454-1fc612a67642",
+      "sessionKey": "agent:shadcn-expert:subagent:abe70c34-a5b4-4d27-89d8-0d74b08db1c8",
+      "provider": "ahvholding",
+      "model": "AHV-Holding-DEV",
+      "workspaceDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 15034,
+        "projectContextChars": 10267,
+        "nonProjectContextChars": 4767
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert/AGENTS.md",
+          "missing": false,
+          "rawChars": 490,
+          "injectedChars": 490,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert/SOUL.md",
+          "missing": false,
+          "rawChars": 1456,
+          "injectedChars": 1456,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert/TOOLS.md",
+          "missing": false,
+          "rawChars": 1003,
+          "injectedChars": 1003,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert/IDENTITY.md",
+          "missing": false,
+          "rawChars": 213,
+          "injectedChars": 213,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert/USER.md",
+          "missing": false,
+          "rawChars": 452,
+          "injectedChars": 452,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 0,
+        "entries": []
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 14290,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 298,
+            "schemaChars": 304,
+            "propertiesCount": 3
+          },
+          {
+            "name": "edit",
+            "summaryChars": 326,
+            "schemaChars": 834,
+            "propertiesCount": 2
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "schemaChars": 225,
+            "propertiesCount": 2
+          },
+          {
+            "name": "exec",
+            "summaryChars": 446,
+            "schemaChars": 1098,
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 322,
+            "schemaChars": 961,
+            "propertiesCount": 12
+          },
+          {
+            "name": "tts",
+            "summaryChars": 152,
+            "schemaChars": 223,
+            "propertiesCount": 2
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 177,
+            "schemaChars": 212,
+            "propertiesCount": 4
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 180,
+            "schemaChars": 161,
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_yield",
+            "summaryChars": 97,
+            "schemaChars": 60,
+            "propertiesCount": 1
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 302,
+            "schemaChars": 1333,
+            "propertiesCount": 18
+          },
+          {
+            "name": "subagents",
+            "summaryChars": 105,
+            "schemaChars": 191,
+            "propertiesCount": 4
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 123,
+            "schemaChars": 574,
+            "propertiesCount": 7
+          },
+          {
+            "name": "web_fetch",
+            "summaryChars": 129,
+            "schemaChars": 374,
+            "propertiesCount": 3
+          },
+          {
+            "name": "image",
+            "summaryChars": 260,
+            "schemaChars": 342,
+            "propertiesCount": 6
+          },
+          {
+            "name": "browser",
+            "summaryChars": 1066,
+            "schemaChars": 2799,
+            "propertiesCount": 48
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 385,
+            "schemaChars": 260,
+            "propertiesCount": 4
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 207,
+            "schemaChars": 249,
+            "propertiesCount": 4
+          },
+          {
+            "name": "figma__figma_get_comments",
+            "summaryChars": 32,
+            "schemaChars": 116,
+            "propertiesCount": 1
+          },
+          {
+            "name": "figma__figma_get_file",
+            "summaryChars": 35,
+            "schemaChars": 239,
+            "propertiesCount": 2
+          },
+          {
+            "name": "figma__figma_get_file_nodes",
+            "summaryChars": 48,
+            "schemaChars": 271,
+            "propertiesCount": 3
+          },
+          {
+            "name": "figma__figma_get_images",
+            "summaryChars": 28,
+            "schemaChars": 330,
+            "propertiesCount": 4
+          },
+          {
+            "name": "figma__figma_get_styles",
+            "summaryChars": 32,
+            "schemaChars": 113,
+            "propertiesCount": 1
+          },
+          {
+            "name": "figma__figma_get_team_components",
+            "summaryChars": 36,
+            "schemaChars": 157,
+            "propertiesCount": 2
+          },
+          {
+            "name": "figma__figma_get_versions",
+            "summaryChars": 35,
+            "schemaChars": 116,
+            "propertiesCount": 1
+          },
+          {
+            "name": "figma__figma_search",
+            "summaryChars": 23,
+            "schemaChars": 218,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gitlab__gitlab_create_branch",
+            "summaryChars": 19,
+            "schemaChars": 199,
+            "propertiesCount": 3
+          },
+          {
+            "name": "gitlab__gitlab_create_issue",
+            "summaryChars": 15,
+            "schemaChars": 182,
+            "propertiesCount": 4
+          },
+          {
+            "name": "gitlab__gitlab_create_merge_request",
+            "summaryChars": 22,
+            "schemaChars": 256,
+            "propertiesCount": 5
+          },
+          {
+            "name": "gitlab__gitlab_create_or_update_file",
+            "summaryChars": 30,
+            "schemaChars": 265,
+            "propertiesCount": 5
+          },
+          {
+            "name": "gitlab__gitlab_get_file",
+            "summaryChars": 32,
+            "schemaChars": 172,
+            "propertiesCount": 3
+          },
+          {
+            "name": "gitlab__gitlab_get_project",
+            "summaryChars": 40,
+            "schemaChars": 89,
+            "propertiesCount": 1
+          },
+          {
+            "name": "gitlab__gitlab_list_branches",
+            "summaryChars": 26,
+            "schemaChars": 89,
+            "propertiesCount": 1
+          },
+          {
+            "name": "gitlab__gitlab_list_commits",
+            "summaryChars": 20,
+            "schemaChars": 160,
+            "propertiesCount": 3
+          },
+          {
+            "name": "gitlab__gitlab_list_issues",
+            "summaryChars": 19,
+            "schemaChars": 176,
+            "propertiesCount": 3
+          },
+          {
+            "name": "gitlab__gitlab_list_merge_requests",
+            "summaryChars": 27,
+            "schemaChars": 134,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gitlab__gitlab_list_pipelines",
+            "summaryChars": 28,
+            "schemaChars": 116,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gitlab__gitlab_search_projects",
+            "summaryChars": 22,
+            "schemaChars": 101,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gitlab__gitlab_trigger_pipeline",
+            "summaryChars": 22,
+            "schemaChars": 165,
+            "propertiesCount": 3
+          },
+          {
+            "name": "stitch__generate_screen_from_text",
+            "summaryChars": 79,
+            "schemaChars": 219,
+            "propertiesCount": 4
+          },
+          {
+            "name": "stitch__get_project",
+            "summaryChars": 26,
+            "schemaChars": 87,
+            "propertiesCount": 1
+          },
+          {
+            "name": "stitch__list_projects",
+            "summaryChars": 24,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "stitch__list_screens",
+            "summaryChars": 29,
+            "schemaChars": 87,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "inputTokens": 2954,
+    "outputTokens": 5363,
+    "totalTokens": 18042,
+    "totalTokensFresh": true,
+    "cacheRead": 40280,
+    "cacheWrite": 15704,
+    "estimatedCostUsd": 0
+  },
+  "agent:shadcn-expert:subagent:dbb72504-8219-4926-a633-4093066babfe": {
+    "sessionId": "6e4d8d0c-9484-4eb0-89df-56707d1ec9ca",
+    "updatedAt": 1776622586634,
+    "spawnDepth": 1,
+    "subagentRole": "orchestrator",
+    "subagentControlScope": "children",
+    "thinkingLevel": "medium",
+    "model": "AHV-Holding-TroLy",
+    "modelProvider": "ahvholding",
+    "spawnedBy": "agent:master-orchestrator:telegram:group:-5168104492",
+    "spawnedWorkspaceDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert"
+  },
+  "agent:shadcn-expert:subagent:83b94e91-e180-40ea-8fa7-631d30b7d71a": {
+    "sessionId": "5905e495-9ae2-4985-824b-dc4bd4610af4",
+    "updatedAt": 1776624228596,
+    "spawnDepth": 1,
+    "subagentRole": "orchestrator",
+    "subagentControlScope": "children",
+    "thinkingLevel": "medium",
+    "model": "AHV-Holding-DEV",
+    "modelProvider": "ahvholding",
+    "spawnedBy": "agent:master-orchestrator:telegram:group:-5168104492",
+    "spawnedWorkspaceDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert",
+    "deliveryContext": {
+      "channel": "telegram"
+    },
+    "lastChannel": "telegram",
+    "label": "dtlx:shadcn-expert",
+    "channel": "telegram",
+    "groupId": "-5168104492",
+    "skillsSnapshot": {
+      "prompt": "",
+      "skills": [],
+      "skillFilter": [
+        "shadcn-expert"
+      ],
+      "resolvedSkills": [],
+      "version": 0
+    },
+    "sessionFile": "/root/.openclaw/agents/shadcn-expert/sessions/5905e495-9ae2-4985-824b-dc4bd4610af4.jsonl",
+    "status": "done",
+    "startedAt": 1776623467513,
+    "abortedLastRun": false,
+    "endedAt": 1776623691698,
+    "runtimeMs": 36830,
+    "contextTokens": 200000,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1776623654753,
+      "sessionId": "5905e495-9ae2-4985-824b-dc4bd4610af4",
+      "sessionKey": "agent:shadcn-expert:subagent:83b94e91-e180-40ea-8fa7-631d30b7d71a",
+      "provider": "ahvholding",
+      "model": "AHV-Holding-DEV",
+      "workspaceDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 21085,
+        "projectContextChars": 16318,
+        "nonProjectContextChars": 4767
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert/AGENTS.md",
+          "missing": false,
+          "rawChars": 7809,
+          "injectedChars": 7809,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 0,
+        "entries": []
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 14290,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 298,
+            "schemaChars": 304,
+            "propertiesCount": 3
+          },
+          {
+            "name": "edit",
+            "summaryChars": 326,
+            "schemaChars": 834,
+            "propertiesCount": 2
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "schemaChars": 225,
+            "propertiesCount": 2
+          },
+          {
+            "name": "exec",
+            "summaryChars": 446,
+            "schemaChars": 1098,
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 322,
+            "schemaChars": 961,
+            "propertiesCount": 12
+          },
+          {
+            "name": "tts",
+            "summaryChars": 152,
+            "schemaChars": 223,
+            "propertiesCount": 2
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 177,
+            "schemaChars": 212,
+            "propertiesCount": 4
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 180,
+            "schemaChars": 161,
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_yield",
+            "summaryChars": 97,
+            "schemaChars": 60,
+            "propertiesCount": 1
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 302,
+            "schemaChars": 1333,
+            "propertiesCount": 18
+          },
+          {
+            "name": "subagents",
+            "summaryChars": 105,
+            "schemaChars": 191,
+            "propertiesCount": 4
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 123,
+            "schemaChars": 574,
+            "propertiesCount": 7
+          },
+          {
+            "name": "web_fetch",
+            "summaryChars": 129,
+            "schemaChars": 374,
+            "propertiesCount": 3
+          },
+          {
+            "name": "image",
+            "summaryChars": 260,
+            "schemaChars": 342,
+            "propertiesCount": 6
+          },
+          {
+            "name": "browser",
+            "summaryChars": 1066,
+            "schemaChars": 2799,
+            "propertiesCount": 48
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 385,
+            "schemaChars": 260,
+            "propertiesCount": 4
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 207,
+            "schemaChars": 249,
+            "propertiesCount": 4
+          },
+          {
+            "name": "figma__figma_get_comments",
+            "summaryChars": 32,
+            "schemaChars": 116,
+            "propertiesCount": 1
+          },
+          {
+            "name": "figma__figma_get_file",
+            "summaryChars": 35,
+            "schemaChars": 239,
+            "propertiesCount": 2
+          },
+          {
+            "name": "figma__figma_get_file_nodes",
+            "summaryChars": 48,
+            "schemaChars": 271,
+            "propertiesCount": 3
+          },
+          {
+            "name": "figma__figma_get_images",
+            "summaryChars": 28,
+            "schemaChars": 330,
+            "propertiesCount": 4
+          },
+          {
+            "name": "figma__figma_get_styles",
+            "summaryChars": 32,
+            "schemaChars": 113,
+            "propertiesCount": 1
+          },
+          {
+            "name": "figma__figma_get_team_components",
+            "summaryChars": 36,
+            "schemaChars": 157,
+            "propertiesCount": 2
+          },
+          {
+            "name": "figma__figma_get_versions",
+            "summaryChars": 35,
+            "schemaChars": 116,
+            "propertiesCount": 1
+          },
+          {
+            "name": "figma__figma_search",
+            "summaryChars": 23,
+            "schemaChars": 218,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gitlab__gitlab_create_branch",
+            "summaryChars": 19,
+            "schemaChars": 199,
+            "propertiesCount": 3
+          },
+          {
+            "name": "gitlab__gitlab_create_issue",
+            "summaryChars": 15,
+            "schemaChars": 182,
+            "propertiesCount": 4
+          },
+          {
+            "name": "gitlab__gitlab_create_merge_request",
+            "summaryChars": 22,
+            "schemaChars": 256,
+            "propertiesCount": 5
+          },
+          {
+            "name": "gitlab__gitlab_create_or_update_file",
+            "summaryChars": 30,
+            "schemaChars": 265,
+            "propertiesCount": 5
+          },
+          {
+            "name": "gitlab__gitlab_get_file",
+            "summaryChars": 32,
+            "schemaChars": 172,
+            "propertiesCount": 3
+          },
+          {
+            "name": "gitlab__gitlab_get_project",
+            "summaryChars": 40,
+            "schemaChars": 89,
+            "propertiesCount": 1
+          },
+          {
+            "name": "gitlab__gitlab_list_branches",
+            "summaryChars": 26,
+            "schemaChars": 89,
+            "propertiesCount": 1
+          },
+          {
+            "name": "gitlab__gitlab_list_commits",
+            "summaryChars": 20,
+            "schemaChars": 160,
+            "propertiesCount": 3
+          },
+          {
+            "name": "gitlab__gitlab_list_issues",
+            "summaryChars": 19,
+            "schemaChars": 176,
+            "propertiesCount": 3
+          },
+          {
+            "name": "gitlab__gitlab_list_merge_requests",
+            "summaryChars": 27,
+            "schemaChars": 134,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gitlab__gitlab_list_pipelines",
+            "summaryChars": 28,
+            "schemaChars": 116,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gitlab__gitlab_search_projects",
+            "summaryChars": 22,
+            "schemaChars": 101,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gitlab__gitlab_trigger_pipeline",
+            "summaryChars": 22,
+            "schemaChars": 165,
+            "propertiesCount": 3
+          },
+          {
+            "name": "stitch__generate_screen_from_text",
+            "summaryChars": 79,
+            "schemaChars": 219,
+            "propertiesCount": 4
+          },
+          {
+            "name": "stitch__get_project",
+            "summaryChars": 26,
+            "schemaChars": 87,
+            "propertiesCount": 1
+          },
+          {
+            "name": "stitch__list_projects",
+            "summaryChars": 24,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "stitch__list_screens",
+            "summaryChars": 29,
+            "schemaChars": 87,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "inputTokens": 387,
+    "outputTokens": 1152,
+    "totalTokens": 13240,
+    "totalTokensFresh": true,
+    "cacheRead": 30301,
+    "cacheWrite": 6821,
+    "estimatedCostUsd": 0
+  },
+  "agent:shadcn-expert:subagent:fc1611f0-235a-48de-8d4e-d51babe798ea": {
+    "sessionId": "43907e0c-5900-4b11-b505-655212154172",
+    "updatedAt": 1776625777464,
+    "spawnDepth": 1,
+    "subagentRole": "orchestrator",
+    "subagentControlScope": "children",
+    "thinkingLevel": "medium",
+    "model": "AHV-Holding-DEV",
+    "modelProvider": "ahvholding",
+    "spawnedBy": "agent:master-orchestrator:telegram:group:-5168104492",
+    "spawnedWorkspaceDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert",
+    "deliveryContext": {
+      "channel": "telegram"
+    },
+    "lastChannel": "telegram",
+    "label": "dtlx:shadcn-expert-v2",
+    "channel": "telegram",
+    "groupId": "-5168104492",
+    "skillsSnapshot": {
+      "prompt": "",
+      "skills": [],
+      "skillFilter": [
+        "shadcn-expert"
+      ],
+      "resolvedSkills": [],
+      "version": 0
+    },
+    "sessionFile": "/root/.openclaw/agents/shadcn-expert/sessions/43907e0c-5900-4b11-b505-655212154172.jsonl",
+    "status": "done",
+    "startedAt": 1776624525829,
+    "abortedLastRun": false,
+    "endedAt": 1776625564903,
+    "runtimeMs": 33703,
+    "contextTokens": 200000,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1776625515762,
+      "sessionId": "43907e0c-5900-4b11-b505-655212154172",
+      "sessionKey": "agent:shadcn-expert:subagent:fc1611f0-235a-48de-8d4e-d51babe798ea",
+      "provider": "ahvholding",
+      "model": "AHV-Holding-DEV",
+      "workspaceDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert",
+      "bootstrapMaxChars": 20000,
+      "bootstrapTotalMaxChars": 150000,
+      "bootstrapTruncation": {
+        "warningMode": "once",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 21088,
+        "projectContextChars": 16321,
+        "nonProjectContextChars": 4767
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert/AGENTS.md",
+          "missing": false,
+          "rawChars": 7809,
+          "injectedChars": 7809,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert/SOUL.md",
+          "missing": false,
+          "rawChars": 1738,
+          "injectedChars": 1738,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert/TOOLS.md",
+          "missing": false,
+          "rawChars": 850,
+          "injectedChars": 850,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert/IDENTITY.md",
+          "missing": false,
+          "rawChars": 633,
+          "injectedChars": 633,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/shadcn-expert/USER.md",
+          "missing": false,
+          "rawChars": 474,
+          "injectedChars": 474,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 0,
+        "entries": []
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 14290,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 298,
+            "schemaChars": 304,
+            "propertiesCount": 3
+          },
+          {
+            "name": "edit",
+            "summaryChars": 326,
+            "schemaChars": 834,
+            "propertiesCount": 2
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "schemaChars": 225,
+            "propertiesCount": 2
+          },
+          {
+            "name": "exec",
+            "summaryChars": 446,
+            "schemaChars": 1098,
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 322,
+            "schemaChars": 961,
+            "propertiesCount": 12
+          },
+          {
+            "name": "tts",
+            "summaryChars": 152,
+            "schemaChars": 223,
+            "propertiesCount": 2
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 177,
+            "schemaChars": 212,
+            "propertiesCount": 4
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 180,
+            "schemaChars": 161,
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_yield",
+            "summaryChars": 97,
+            "schemaChars": 60,
+            "propertiesCount": 1
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 302,
+            "schemaChars": 1333,
+            "propertiesCount": 18
+          },
+          {
+            "name": "subagents",
+            "summaryChars": 105,
+            "schemaChars": 191,
+            "propertiesCount": 4
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 123,
+            "schemaChars": 574,
+            "propertiesCount": 7
+          },
+          {
+            "name": "web_fetch",
+            "summaryChars": 129,
+            "schemaChars": 374,
+            "propertiesCount": 3
+          },
+          {
+            "name": "image",
+            "summaryChars": 260,
+            "schemaChars": 342,
+            "propertiesCount": 6
+          },
+          {
+            "name": "browser",
+            "summaryChars": 1066,
+            "schemaChars": 2799,
+            "propertiesCount": 48
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 385,
+            "schemaChars": 260,
+            "propertiesCount": 4
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 207,
+            "schemaChars": 249,
+            "propertiesCount": 4
+          },
+          {
+            "name": "figma__figma_get_comments",
+            "summaryChars": 32,
+            "schemaChars": 116,
+            "propertiesCount": 1
+          },
+          {
+            "name": "figma__figma_get_file",
+            "summaryChars": 35,
+            "schemaChars": 239,
+            "propertiesCount": 2
+          },
+          {
+            "name": "figma__figma_get_file_nodes",
+            "summaryChars": 48,
+            "schemaChars": 271,
+            "propertiesCount": 3
+          },
+          {
+            "name": "figma__figma_get_images",
+            "summaryChars": 28,
+            "schemaChars": 330,
+            "propertiesCount": 4
+          },
+          {
+            "name": "figma__figma_get_styles",
+            "summaryChars": 32,
+            "schemaChars": 113,
+            "propertiesCount": 1
+          },
+          {
+            "name": "figma__figma_get_team_components",
+            "summaryChars": 36,
+            "schemaChars": 157,
+            "propertiesCount": 2
+          },
+          {
+            "name": "figma__figma_get_versions",
+            "summaryChars": 35,
+            "schemaChars": 116,
+            "propertiesCount": 1
+          },
+          {
+            "name": "figma__figma_search",
+            "summaryChars": 23,
+            "schemaChars": 218,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gitlab__gitlab_create_branch",
+            "summaryChars": 19,
+            "schemaChars": 199,
+            "propertiesCount": 3
+          },
+          {
+            "name": "gitlab__gitlab_create_issue",
+            "summaryChars": 15,
+            "schemaChars": 182,
+            "propertiesCount": 4
+          },
+          {
+            "name": "gitlab__gitlab_create_merge_request",
+            "summaryChars": 22,
+            "schemaChars": 256,
+            "propertiesCount": 5
+          },
+          {
+            "name": "gitlab__gitlab_create_or_update_file",
+            "summaryChars": 30,
+            "schemaChars": 265,
+            "propertiesCount": 5
+          },
+          {
+            "name": "gitlab__gitlab_get_file",
+            "summaryChars": 32,
+            "schemaChars": 172,
+            "propertiesCount": 3
+          },
+          {
+            "name": "gitlab__gitlab_get_project",
+            "summaryChars": 40,
+            "schemaChars": 89,
+            "propertiesCount": 1
+          },
+          {
+            "name": "gitlab__gitlab_list_branches",
+            "summaryChars": 26,
+            "schemaChars": 89,
+            "propertiesCount": 1
+          },
+          {
+            "name": "gitlab__gitlab_list_commits",
+            "summaryChars": 20,
+            "schemaChars": 160,
+            "propertiesCount": 3
+          },
+          {
+            "name": "gitlab__gitlab_list_issues",
+            "summaryChars": 19,
+            "schemaChars": 176,
+            "propertiesCount": 3
+          },
+          {
+            "name": "gitlab__gitlab_list_merge_requests",
+            "summaryChars": 27,
+            "schemaChars": 134,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gitlab__gitlab_list_pipelines",
+            "summaryChars": 28,
+            "schemaChars": 116,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gitlab__gitlab_search_projects",
+            "summaryChars": 22,
+            "schemaChars": 101,
+            "propertiesCount": 2
+          },
+          {
+            "name": "gitlab__gitlab_trigger_pipeline",
+            "summaryChars": 22,
+            "schemaChars": 165,
+            "propertiesCount": 3
+          },
+          {
+            "name": "stitch__generate_screen_from_text",
+            "summaryChars": 79,
+            "schemaChars": 219,
+            "propertiesCount": 4
+          },
+          {
+            "name": "stitch__get_project",
+            "summaryChars": 26,
+            "schemaChars": 87,
+            "propertiesCount": 1
+          },
+          {
+            "name": "stitch__list_projects",
+            "summaryChars": 24,
+            "schemaChars": 33,
+            "propertiesCount": 0
+          },
+          {
+            "name": "stitch__list_screens",
+            "summaryChars": 29,
+            "schemaChars": 87,
+            "propertiesCount": 1
+          }
+        ]
+      }
+    },
+    "inputTokens": 1198,
+    "outputTokens": 304,
+    "totalTokens": 13121,
+    "totalTokensFresh": true,
+    "cacheRead": 11696,
+    "cacheWrite": 12559,
+    "estimatedCostUsd": 0
+  }
+}

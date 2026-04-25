@@ -1,0 +1,14 @@
+{
+  "name": "ahv-mcp-stitch",
+  "version": "1.0.0",
+  "description": "AHV Stitch MCP server — API Key auth, async polling",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "install-deps": "npm install --silent"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  }
+}

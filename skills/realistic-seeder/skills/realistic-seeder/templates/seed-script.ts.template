@@ -1,0 +1,88 @@
+import mongoose from 'mongoose';
+import { fakerVI as faker } from '@faker-js/faker';
+import { UserModel, UserRole, UserGender, UserStatus } from '../models/user.model';
+import { StudentModel } from '../models/student.model';
+import { CourseModel } from '../models/course.model';
+import { PaymentModel } from '../models/payment.model';
+
+const SEED_COUNT = process.env.SEED_COUNT ? parseInt(process.env.SEED_COUNT) : 50;
+
+async function seedRealisticData() {
+  console.log('--- START REALISTIC SEEDING (VIETNAM CONTEXT) ---');
+
+  // 1. Create Courses
+  const courses = [];
+  const courseNames = ['Hạng B2 - Khóa K22/2024', 'Hạng B1 - Khóa K01/2024', 'Hạng C - Khóa K10/2024'];
+  
+  for (const name of courseNames) {
+    const course = await CourseModel.create({
+      name,
+      start_date: faker.date.past({ years: 1 }),
+      end_date: faker.date.future({ years: 1 }),
+      status: 'active',
+      total_students: 0,
+      tuition_fee: name.includes('B2') ? 18000000 : 22000000
+    });
+    courses.push(course);
+  }
+
+  // 2. Create Students & Users
+  for (let i = 0; i < SEED_COUNT; i++) {
+    const gender = faker.helpers.arrayElement([UserGender.Male, UserGender.Female]);
+    const firstName = faker.person.firstName(gender === UserGender.Male ? 'male' : 'female');
+    const lastName = faker.person.lastName();
+    
+    const user = await UserModel.create({
+      username: faker.internet.userName({ firstName, lastName }),
+      email: faker.internet.email({ firstName, lastName }),
+      phone: faker.helpers.fromRegExp(/0[35789][0-9]{8}/),
+      first_name: firstName,
+      last_name: lastName,
+      gender,
+      dob: faker.date.birthdate({ min: 18, max: 60, mode: 'age' }),
+      address: `${faker.location.streetAddress()}, ${faker.location.city()}, Việt Nam`,
+      identity_card: faker.helpers.fromRegExp(/[0-9]{12}/),
+      status: UserStatus.Active,
+      role: UserRole.Student,
+      password: 'password123' // Demo password
+    });
+
+    const targetCourse = faker.helpers.arrayElement(courses);
+    const tuitionTotal = targetCourse.tuition_fee;
+    const isFullyPaid = faker.datatype.boolean(0.3);
+    const paidAmount = isFullyPaid ? tuitionTotal : faker.number.int({ min: 5000000, max: tuitionTotal - 1000000 });
+
+    const student = await StudentModel.create({
+      user_id: user._id,
+      balance: 0,
+      license_category_id: targetCourse.name.split(' - ')[0].replace('Hạng ', ''),
+      status_detail: faker.helpers.arrayElement(['Chờ KSK', 'Khám xong', 'Hồ sơ xong', 'Đang học', 'THI']),
+      tuition: {
+        total: tuitionTotal,
+        paid: paidAmount
+      },
+      progress_flags: {
+        dat_completed: faker.datatype.boolean(0.4),
+        cabin_completed: faker.datatype.boolean(0.2)
+      }
+    });
+
+    // 3. Create Payments for this student
+    if (paidAmount > 0) {
+      await PaymentModel.create({
+        student_id: student._id,
+        amount: paidAmount,
+        status: 'completed',
+        payment_method: 'VietQR',
+        transaction_id: faker.string.alphanumeric(10).toUpperCase(),
+        description: `Đóng học phí đợt 1 - ${targetCourse.name}`
+      });
+    }
+
+    console.log(`- Seeded: ${lastName} ${firstName} (${user.email})`);
+  }
+
+  console.log('--- SEEDING COMPLETED ---');
+}
+
+export default seedRealisticData;

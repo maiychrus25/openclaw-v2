@@ -1,0 +1,89 @@
+{
+  "agent:product-marketing-context:subagent:72ceb1f5-26ed-473a-a6c0-68f9d1158a5d": {
+    "sessionId": "e62ad628-836a-42f9-80d5-5328871b9c36",
+    "updatedAt": 1776570112561,
+    "spawnDepth": 1,
+    "subagentRole": "orchestrator",
+    "subagentControlScope": "children",
+    "thinkingLevel": "medium",
+    "model": "AHV-Holding-DEV",
+    "modelProvider": "ahvholding",
+    "spawnedBy": "agent:master-orchestrator:telegram:direct:6053576134",
+    "spawnedWorkspaceDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/product-marketing-context",
+    "deliveryContext": {
+      "channel": "telegram"
+    },
+    "lastChannel": "telegram",
+    "label": "ahv-knowledge-hub:product-marketing-context",
+    "channel": "telegram",
+    "skillsSnapshot": {
+      "prompt": "\n\nThe following skills provide specialized instructions for specific tasks.\nUse the read tool to load a skill's file when the task matches its description.\nWhen a skill file references a relative path, resolve it against the skill directory (parent of SKILL.md / dirname of the path) and use that absolute path in tool commands.\n\n<available_skills>\n  <skill>\n    <name>product-marketing-context</name>\n    <description>When the user wants to create or update their product marketing context document. Also use when the user mentions &apos;product context,&apos; &apos;marketing context,&apos; &apos;set up context,&apos; &apos;positioning,&apos; &apos;who is my target audience,&apos; &apos;describe my product,&apos; &apos;ICP,&apos; &apos;ideal customer profile,&apos; or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills — it creates `.agents/product-marketing-context.md` that all other skills reference for product, audience, and positioning context.</description>\n    <location>~/.openclaw/workspaces2/v4-ecosystem-review/product-marketing-context/skills/product-marketing-context/SKILL.md</location>\n  </skill>\n</available_skills>",
+      "skills": [
+        {
+          "name": "product-marketing-context"
+        }
+      ],
+      "skillFilter": [
+        "product-marketing-context"
+      ],
+      "resolvedSkills": [
+        {
+          "name": "product-marketing-context",
+          "description": "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills — it creates `.agents/product-marketing-context.md` that all other skills reference for product, audience, and positioning context.",
+          "filePath": "/root/.openclaw/workspaces2/v4-ecosystem-review/product-marketing-context/skills/product-marketing-context/SKILL.md",
+          "baseDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/product-marketing-context/skills/product-marketing-context",
+          "source": "openclaw-workspace",
+          "sourceInfo": {
+            "path": "/root/.openclaw/workspaces2/v4-ecosystem-review/product-marketing-context/skills/product-marketing-context/SKILL.md",
+            "source": "openclaw-workspace",
+            "scope": "project",
+            "origin": "top-level",
+            "baseDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/product-marketing-context/skills/product-marketing-context"
+          },
+          "disableModelInvocation": false
+        }
+      ],
+      "version": 0
+    },
+    "sessionFile": "/root/.openclaw/agents/product-marketing-context/sessions/e62ad628-836a-42f9-80d5-5328871b9c36.jsonl",
+    "status": "failed",
+    "startedAt": 1776569549213,
+    "abortedLastRun": false,
+    "endedAt": 1776569714803,
+    "runtimeMs": 165590
+  },
+  "agent:product-marketing-context:subagent:30df9384-cb3b-4fdc-bb94-17874218e835": {
+    "sessionId": "73f5b842-b028-41ac-81be-5e7e6a5dc19c",
+    "updatedAt": 1776624228271,
+    "spawnDepth": 1,
+    "subagentRole": "orchestrator",
+    "subagentControlScope": "children",
+    "thinkingLevel": "medium",
+    "model": "AHV-Holding-DEV",
+    "modelProvider": "ahvholding",
+    "spawnedBy": "agent:master-orchestrator:telegram:group:-5168104492",
+    "spawnedWorkspaceDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/product-marketing-context",
+    "deliveryContext": {
+      "channel": "telegram"
+    },
+    "lastChannel": "telegram",
+    "label": "dtlx:product-marketing-context",
+    "channel": "telegram",
+    "groupId": "-5168104492",
+    "skillsSnapshot": {
+      "prompt": "",
+      "skills": [],
+      "skillFilter": [
+        "product-marketing-context"
+      ],
+      "resolvedSkills": [],
+      "version": 0
+    },
+    "startedAt": 1776623857382,
+    "status": "failed",
+    "sessionFile": "/root/.openclaw/agents/product-marketing-context/sessions/73f5b842-b028-41ac-81be-5e7e6a5dc19c.jsonl",
+    "abortedLastRun": false,
+    "endedAt": 1776624194458,
+    "runtimeMs": 337076
+  }
+}

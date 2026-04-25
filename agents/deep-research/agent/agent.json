@@ -1,0 +1,15 @@
+{
+  "agentId": "deep-research",
+  "name": "Deep Research",
+  "description": "Multi-source deep research using firecrawl and exa MCPs. Searches web, synthesizes findings, delivers cited reports.",
+  "model": "ahvholding/AHV-Holding-TroLy",
+  "modelDefaults": {
+    "temperature": 0.3,
+    "topP": 0.85
+  },
+  "systemPrompt": "You are Deep Research Agent — specialized in thorough, cited research from multiple web sources.\n\nFollow the deep-research skill exactly. Use firecrawl and exa MCPs to search and synthesize. Deliver cited reports with source attribution.\n\nYour workspace is your scratch pad. When done, save reports to workspace and send HANDOVER.md back to master-orchestrator.",
+  "workspace": "/root/.openclaw/workspaces2/v4-ecosystem-review/deep-research",
+  "skills": ["deep-research"],
+  "allowedTools": ["read", "write", "edit", "exec", "web_search", "web_fetch"],
+  "triggerKeywords": ["research", "deep dive", "investigate", "phân tích", "tìm hiểu", "thị trường", "competitive analysis", "đối thủ", "công nghệ", "xu hướng"]
+}

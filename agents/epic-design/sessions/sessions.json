@@ -1,0 +1,36 @@
+{
+  "agent:epic-design:subagent:9e3963e9-0b27-4365-a40f-6f699de8c23f": {
+    "sessionId": "98cea9fe-b7a1-4baf-bf6b-779d5b12d3fb",
+    "updatedAt": 1776624200944,
+    "spawnDepth": 1,
+    "subagentRole": "orchestrator",
+    "subagentControlScope": "children",
+    "thinkingLevel": "medium",
+    "model": "AHV-Holding-DEV",
+    "modelProvider": "ahvholding",
+    "spawnedBy": "agent:master-orchestrator:telegram:group:-5168104492",
+    "spawnedWorkspaceDir": "/root/.openclaw/workspaces2/v4-ecosystem-review/epic-design",
+    "deliveryContext": {
+      "channel": "telegram"
+    },
+    "lastChannel": "telegram",
+    "label": "dtlx:epic-design",
+    "channel": "telegram",
+    "groupId": "-5168104492",
+    "skillsSnapshot": {
+      "prompt": "",
+      "skills": [],
+      "skillFilter": [
+        "epic-design"
+      ],
+      "resolvedSkills": [],
+      "version": 0
+    },
+    "sessionFile": "/root/.openclaw/agents/epic-design/sessions/98cea9fe-b7a1-4baf-bf6b-779d5b12d3fb.jsonl",
+    "status": "failed",
+    "startedAt": 1776624145207,
+    "abortedLastRun": false,
+    "endedAt": 1776624170313,
+    "runtimeMs": 25106
+  }
+}
