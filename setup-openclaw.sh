@@ -100,6 +100,10 @@ try:
         json.dump(data, f, indent=2, ensure_ascii=False)
     
     print(f'--- Updated env variables in {config_file}')
+    print('\nVerification Summary:')
+    for key, val in data['env'].items():
+        masked = val[:4] + '*' * (len(val)-8) + val[-4:] if len(val) > 8 else '****'
+        print(f'  [✓] {key}: {masked}')
 except Exception as e:
     print(f'Error: {e}')
     sys.exit(1)
