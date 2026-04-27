@@ -84,17 +84,18 @@ try:
 
     if 'env' not in data: data['env'] = {}
     
-    # Update Environment Section
+    # Update Environment Section (Ensure keys exist to prevent OpenClaw errors)
     data['env']['AHVHOLDING_API_KEY'] = ahv_key
     data['env']['BOT_TOKEN'] = bot_token
     
-    if google_key: data['env']['GOOGLE_API_KEY'] = google_key
-    if conf_token: data['env']['CONFLUENCE_TOKEN'] = conf_token
-    if conf_email: data['env']['CONFLUENCE_EMAIL'] = conf_email
-    if conf_url: data['env']['CONFLUENCE_URL'] = conf_url
-    if gitlab_url: data['env']['GITLAB_URL'] = gitlab_url
-    if gitlab_token: data['env']['GITLAB_TOKEN'] = gitlab_token
-    if stitch_key: data['env']['STITCH_API_KEY'] = stitch_key
+    # Optional fields: Use new value if provided, otherwise keep existing or set to empty
+    data['env']['GOOGLE_API_KEY'] = google_key or data['env'].get('GOOGLE_API_KEY', "")
+    data['env']['CONFLUENCE_TOKEN'] = conf_token or data['env'].get('CONFLUENCE_TOKEN', "")
+    data['env']['CONFLUENCE_EMAIL'] = conf_email or data['env'].get('CONFLUENCE_EMAIL', "")
+    data['env']['CONFLUENCE_URL'] = conf_url or data['env'].get('CONFLUENCE_URL', "")
+    data['env']['GITLAB_URL'] = gitlab_url or data['env'].get('GITLAB_URL', "https://gitlab.com")
+    data['env']['GITLAB_TOKEN'] = gitlab_token or data['env'].get('GITLAB_TOKEN', "")
+    data['env']['STITCH_API_KEY'] = stitch_key or data['env'].get('STITCH_API_KEY', "")
 
     with open(config_file, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
