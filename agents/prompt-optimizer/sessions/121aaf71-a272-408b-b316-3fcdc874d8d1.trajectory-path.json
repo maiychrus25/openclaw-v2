@@ -1,6 +1,0 @@
-{
-  "traceSchema": "openclaw-trajectory-pointer",
-  "schemaVersion": 1,
-  "sessionId": "121aaf71-a272-408b-b316-3fcdc874d8d1",
-  "runtimeFile": "/root/.openclaw/agents/prompt-optimizer/sessions/121aaf71-a272-408b-b316-3fcdc874d8d1.trajectory.jsonl"
-}

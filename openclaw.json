@@ -4,7 +4,13 @@
     "lastTouchedAt": "2026-04-11T00:55:20.709Z"
   },
   "env": {
-    "AHVHOLDING_API_KEY": "sk-3d8edc47e4037bc4-uqgure-3230ee14"
+    "AHVHOLDING_API_KEY": "DUMMY",
+    "BOT_TOKEN": "DUMMY",
+    "GOOGLE_API_KEY": "GOOGLE_FINAL",
+    "CONFLUENCE_TOKEN": "CONF_TOKEN_FINAL",
+    "GATEWAY_TOKEN": "GATE_FINAL",
+    "CONFLUENCE_URL": "CONF_URL_FINAL",
+    "CONFLUENCE_EMAIL": "CONF_EMAIL_FINAL"
   },
   "browser": {
     "enabled": true,
@@ -1038,142 +1044,142 @@
       "enabled": true,
       "accounts": {
         "main_bot": {
-          "botToken": "8677118967:AAG3S3xemTiYlTEuXGydyXR6R3c-1QbWWIw",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing",
           "groups": {
             "-5168104492": {}
           }
         },
         "agile-product-owner_bot": {
-          "botToken": "8780842070:AAEsgfYGXQpJHuw8nJG_QV0G-Gb0n-urdqE",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "ai-seo_bot": {
-          "botToken": "8701675628:AAFZOFTYymaWMKGbVF69bUvclcR97VGXBEY",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "clean-code_bot": {
-          "botToken": "8797029571:AAHrt5qqiFlDsXcYK6DddKArmB3us3T7OVk",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "code-reviewer_bot": {
-          "botToken": "8569521497:AAHXjTB6yDiXC3ooNMLiu1eVTxqllhtJNbQ",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "coding-standards_bot": {
-          "botToken": "8687013631:AAEadqG74QMRBAnBQoMnR3hs9Cphxg5oFPE",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "content-strategy_bot": {
-          "botToken": "8631036200:AAG3m6fcDED4yGvn8cbbJeh1IKGZ_So2l_E",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "database-reviewer_bot": {
-          "botToken": "8288685233:AAG5Y6z2DsJgwrRZLvuc9ecdLuPPTr4rDZc",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "database-schema-designer_bot": {
-          "botToken": "8616064308:AAHVdC0XC0q4okD1qf-h3vc9rq_nIThWgAg",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "epic-design_bot": {
-          "botToken": "8607620910:AAEaqBX_WMn4SQz38B7qbHbSKu1qfPtwVLM",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "harness-optimizer_bot": {
-          "botToken": "8737687876:AAHHoRxxGVxxECGD5Mg3AXm_AYEKPEzR9QI",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "market-intelligence_bot": {
-          "botToken": "8660766320:AAEijGn8nvvEFn4J7ZnNcG1slupR2FC3Hzc",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "performance-optimizer_bot": {
-          "botToken": "8059050784:AAENEd-V5eveAXPdKPLyHnhAyPL-US6sCOY",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "planner_bot": {
-          "botToken": "8793147193:AAE40Utggq342hW_LIiE8ebvZY2QjALYQtk",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "playwright-pro_bot": {
-          "botToken": "8774288839:AAHHcgLWf6Jhbodyg_oYLjhPUQRIFyVw520",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "product-marketing-context_bot": {
-          "botToken": "8731088515:AAE3E6FGs8GxK5f1Y_DM2ZGpjgSr4I8vd8A",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "product-strategy_bot": {
-          "botToken": "8610649811:AAEdFLZYquDqtIawu6UAm37FyKHQjhZGB_8",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "prompt-optimizer_bot": {
-          "botToken": "8578161006:AAFuNPBSi_EKAgA_kCTYAK0Jh398mNHix2Y",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "realistic-seeder_bot": {
-          "botToken": "8573074754:AAGwvgqJGuJUS_Ng1H5MhO2e6uzq6hA7FHM",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "refactor-cleaner_bot": {
-          "botToken": "8697597675:AAGI_kkidqmlJ-BWduxkV6coHZXB0qMlChU",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "security-reviewer_bot": {
-          "botToken": "8714527738:AAGKxuquF43tr6yEMaWHJWN-Agk7FjNZaTk",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "senior-architect_bot": {
-          "botToken": "8718045256:AAE2VjZQbYUN2sA-O6aNLfnTPcuKTmOiOmY",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "senior-backend_bot": {
-          "botToken": "8718045256:AAE2VjZQbYUN2sA-O6aNLfnTPcuKTmOiOmY",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "senior-devops_bot": {
-          "botToken": "8365541473:AAFV1rvEO9nkTbHiaKb23UWZyXG7t1uzhro",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "senior-frontend_bot": {
-          "botToken": "8778195588:AAH7vo7EpylbTsEQ_8j6XHF-PHcvxHETB_c",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "senior-qa_bot": {
-          "botToken": "8383505571:AAGIrhXLtR7ZGao4QD1Nz3IKQp1Rr8CplRk",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "senior-security_bot": {
-          "botToken": "8752534991:AAFkcYCf-7sOj2hHSR_w2KjpqTs866qggaE",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "seo-audit_bot": {
-          "botToken": "8260406123:AAEH8a6wmvhS2vatuW4UV1MMsVBtjtG9sEc",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "shadcn-expert_bot": {
-          "botToken": "8603405996:AAED_THkS6qgIuOcx8-h0HiWXZAjtiDDvYA",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "stitch-design_bot": {
-          "botToken": "8761657141:AAEt0096RbAPEgwCC9zoJXHDEle5YEjhnbM",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "stitch-loop_bot": {
-          "botToken": "8691874082:AAHqqjn3KA_wE6E80y0uVSQWMeyMdUuLYbo",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "typescript-reviewer_bot": {
-          "botToken": "8691874082:AAHqqjn3KA_wE6E80y0uVSQWMeyMdUuLYbo",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "ui-design-system_bot": {
-          "botToken": "8785163490:AAHEX__RZhNuGHEjR2HT8hqLthmhXFK-UDo",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         },
         "ui-ux-pro-max_bot": {
-          "botToken": "8564974403:AAFS0ZmAIi33z0pUz69Y4VtT2GA-VfEY8pU",
+          "botToken": "${BOT_TOKEN}",
           "dmPolicy": "pairing"
         }
       }
@@ -1423,7 +1429,7 @@
     "mode": "local",
     "auth": {
       "mode": "token",
-      "token": "83eaaf256ae54e4fa1bf7798033cfe591438bcdff21417b3"
+      "token": "${GATEWAY_TOKEN}"
     },
     "port": 18789,
     "bind": "loopback",
@@ -1444,7 +1450,7 @@
         "enabled": true,
         "config": {
           "webSearch": {
-            "apiKey": "AIzaSyCBlb9hHeijfFXkpNifWfEJB0K53fHNAZ8"
+            "apiKey": "${GOOGLE_API_KEY}"
           }
         }
       },
@@ -1461,9 +1467,30 @@
           "/root/.openclaw/mcp-servers/confluence/server.js"
         ],
         "env": {
-          "CONFLUENCE_URL": "https://dtlx.atlassian.net",
-          "CONFLUENCE_EMAIL": "ninhkhuongpl7@gmail.com",
-          "CONFLUENCE_TOKEN": "ATATT3xFfGF0bFjmIN6IPHwDzRChO8oMe5XAaA6dheluE8J2eUTNZHLgprik7oLx-vNnZsNVCb4cAAjziLDb27lKFHU2_RTgdeuv8zMkaPR-or2gSJQjHp8TMmOtI53F6MauTeaXX5Tg4gdMYyJ2nUKI-2HSMvK4TLkXLmKSKrdGrOpNDLRgMxA=8865492F"
+          "CONFLUENCE_URL": "${CONFLUENCE_URL}",
+          "CONFLUENCE_EMAIL": "${CONFLUENCE_EMAIL}",
+          "CONFLUENCE_TOKEN": "${CONFLUENCE_TOKEN}"
+        },
+        "enabled": true
+      },
+      "gitlab": {
+        "command": "node",
+        "args": [
+          "/root/.openclaw/mcp-servers/gitlab/server.js"
+        ],
+        "env": {
+          "GITLAB_URL": "${GITLAB_URL}",
+          "GITLAB_TOKEN": "${GITLAB_TOKEN}"
+        },
+        "enabled": true
+      },
+      "stitch": {
+        "command": "node",
+        "args": [
+          "/root/.openclaw/mcp-servers/stitch/server.js"
+        ],
+        "env": {
+          "STITCH_API_KEY": "${STITCH_API_KEY}"
         },
         "enabled": true
       }
